@@ -1,0 +1,38 @@
+main {
+    height: 100dvh;
+    &[data-section="home"]{
+        .home{
+            display: block;
+        }
+        .search,.playlist,.user{
+            display: none;
+        }
+    }
+
+    &[data-section="search"]{
+        .search{
+            display: block;
+        }
+        .home,.playlist,.user{
+            display: none;
+        }
+    }
+
+    &[data-section="playlist"]{
+        .playlist{
+            display: block;
+        }
+        .home,.search,.user{
+            display: none;
+        }
+    }
+
+    &[data-section="user"]{
+        .search{
+            display: block;
+        }
+        .home,.search,.playlist{
+            display: none;
+        }
+    }
+}

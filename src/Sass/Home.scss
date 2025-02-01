@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+
+.home {
+    position: relative;
+    height: 100dvh;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .home-header {
+        padding: 10px;
+        background-color: var(--secondary);
+        border-bottom: 1px solid var(--tertiary);
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+
+        .web-title {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-family: "Playwrite IN", serif;
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+
+            .web-logo {
+                height: 32px;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        .home-buttons {
+            button {
+                padding: 5px 8px;
+                background-color: transparent;
+                border: 0;
+                border-radius: 3px;
+                font-size: 16px;
+                color: var(--font);
+                cursor: pointer;
+                overflow: hidden;
+
+                &.active-btn {
+                    background-color: var(--tertiary);
+                    padding: 5px 8px 5px 12px;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        width: 3px;
+                        height: 75%;
+                        background-color: var(--green);
+                        border-radius: 10px;
+                        position: absolute;
+                        top: 50%;
+                        left: 4px;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &:nth-child(1) {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .music-section {
+        padding: 10px 11px;
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        overflow: auto;
+
+        .music-wrapper {
+            .slider-heading {
+                margin-bottom: 5px;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .music-slider {
+                display: flex;
+                gap: 16px;
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .music-card {
+                    width: 150px;
+                    flex-shrink: 0;
+                    overflow: hidden;
+
+                    .music-cover {
+                        height: 150px;
+                        aspect-ratio: 1/1;
+                        border-radius: 5px;
+                    }
+
+                    .music-title {
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+
+                    .music-artist {
+                        margin: auto;
+                        width: 90%;
+                        font-size: 12px;
+                        color: var(--light-grey);
+                    }
+
+                    .music-title,
+                    .music-artist {
+                        overflow: hidden;
+                        text-wrap: nowrap;
+                        text-align: center;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                .playlist-card {
+                    width: 150px;
+                    flex-shrink: 0;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 2;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        margin: auto;
+                        height: 6px;
+                        border-radius: 4px 4px 0 0;
+                        left: 50%;
+                        position: absolute;
+                        transform: translateX(-50%);
+                    }
+
+                    &::before {
+                        width: 88%;
+                        background-color: var(--penta);
+                        top: 7px;
+
+                    }
+
+                    &::after {
+                        width: 78%;
+                        background-color: var(--quatenary);
+                        top: 0;
+                    }
+
+                    .playlist-cover {
+                        margin-top: 14px;
+                        height: 136px;
+                        width: 150px;
+                        border-radius: 5px;
+                    }
+
+                    .playlist-title {
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+
+                    .playlist-artist {
+                        margin: auto;
+                        width: 90%;
+                        font-size: 12px;
+                        color: var(--light-grey);
+                    }
+
+                    .playlist-title,
+                    .playlist-artist {
+                        overflow: hidden;
+                        text-wrap: nowrap;
+                        text-align: center;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+
+        .artist-wrapper {
+            h1 {
+                margin-bottom: 5px;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .artist-slider {
+                display: flex;
+                gap: 16px;
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .artist-card {
+                    .artist-cover-img {
+                        height: 140px;
+                        border-radius: 50%;
+                        aspect-ratio: 1/1;
+                        overflow: hidden;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            width: 90%;
+                            height: 90%;
+                            border: 10px solid rgba(48, 48, 48, 0.5);
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        img {
+                            height: 140px;
+                            border-radius: 50%;
+                            aspect-ratio: 1/1;
+                        }
+                    }
+
+                    .artist-name {
+                        text-align: center;
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+}

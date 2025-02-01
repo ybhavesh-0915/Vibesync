@@ -1,0 +1,256 @@
+@media only screen and (orientation: landscape) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        background-color: var(--secondary);
+    }
+
+    #root {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+
+        main {
+            width: calc(100dvw - 270px);
+            .home {
+                width: calc(100dvw - 270px);
+
+                .home-header {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        footer {
+            width: 270px !important;
+            height: 100vh;
+            background: var(--tertiary) !important;
+            border-bottom: 0 !important;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            position: relative !important;
+            top: 0;
+            right: 0;
+            overflow: auto;
+
+            .footer-buttons {
+                flex-direction: column;
+
+                .footer-btn {
+                    padding: 5px 10px;
+                    flex-direction: row !important;
+                    background-color: var(--quatenary);
+                    border-radius: 3px;
+
+                    &:hover {
+                        background-color: var(--penta);
+                    }
+
+                    &.active-btn {
+                        position: relative;
+
+                        &:after {
+                            content: "";
+                            width: 3px;
+                            height: 75%;
+                            background-color: var(--green);
+                            border-radius: 10px;
+                            position: absolute;
+                            top: 50%;
+                            left: 4px;
+                            transform: translateY(-50%);
+                        }
+                    }
+
+                    span {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .footer-music-player {
+                width: 100%;
+                padding: 8px;
+                background-color: var(--quatenary);
+                flex-shrink: 0;
+                overflow: hidden;
+
+                .footer-music-info {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    img {
+                        height: 45px;
+                        border-radius: 5px;
+                        aspect-ratio: 1/1;
+                    }
+
+                    div {
+                        width: 100%;
+
+                        .player-song-title {
+                            font-size: 18px;
+                        }
+
+                        .player-artist-name {
+                            font-size: 10px;
+                            color: var(--light-grey);
+                        }
+                    }
+
+                    .footer-loop-btn {
+                        background-color: transparent;
+                        border-radius: 3px;
+                        border: 0;
+                        font-size: 20px;
+                        cursor: pointer;
+                        color: var(--font);
+
+                        &.active-btn {
+                            position: relative;
+                            color: var(--green);
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 4px;
+                                height: 4px;
+                                border-radius: 50%;
+                                background-color: var(--green);
+                                top: 48%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+
+                            }
+                        }
+                    }
+                }
+
+                .footer-player-controls {
+                    margin-top: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .footer-like-btn,
+                    .footer-playlist-add-btn {
+                        background-color: transparent;
+                        border: 0;
+                        color: var(--font);
+                        font-size: 20px;
+                        cursor: pointer;
+                        transition: all 0.1s;
+
+                        &:active {
+                            color: var(--green);
+                            transform: scale(1.3);
+                        }
+                    }
+
+                    .footer-music-ctrls {
+                        button {
+                            background-color: transparent;
+                            border: 0;
+                            color: var(--font);
+                            font-size: 20px;
+                            transition: all 0.1s;
+                            cursor: pointer;
+
+                            &:nth-child(2) {
+                                margin: 0 8px;
+                            }
+
+                            &:active {
+                                color: var(--green);
+                                transform: scale(1.3);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .space {
+        height: 163.4px;
+    }
+
+    .footer-music-player {
+        width: 95%;
+        padding: 8px 8px 2px 8px;
+        border-radius: 5px;
+        display: block;
+        position: fixed;
+        left: 50%;
+        bottom: 85px;
+        z-index: 5;
+        transform: translateX(-50%);
+        overflow: hidden;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #00bfff);
+        background-size: 180% 180%;
+        animation: gradient 15s ease infinite;
+
+        .footer-music-info {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+                height: 45px;
+                border-radius: 5px;
+                aspect-ratio: 1/1;
+            }
+
+            div {
+                width: 100%;
+
+                .player-song-title {
+                    font-size: 18px;
+                }
+
+                .player-artist-name {
+                    font-size: 10px;
+                    color: var(--light-grey);
+                }
+            }
+
+            .footer-loop-btn {
+                background-color: transparent;
+                border-radius: 3px;
+                border: 0;
+                font-size: 20px;
+                cursor: pointer;
+                color: var(--font);
+
+                &.active-btn {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background-color: var(--green);
+                        top: 48%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                    }
+                }
+            }
+        }
+
+        .footer-player-controls {
+            display: none;
+        }
+    }
+}

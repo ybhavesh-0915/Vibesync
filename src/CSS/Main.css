@@ -1,0 +1,27 @@
+main {
+  height: 100dvh;
+}
+main[data-section=home] .home {
+  display: block;
+}
+main[data-section=home] .search, main[data-section=home] .playlist, main[data-section=home] .user {
+  display: none;
+}
+main[data-section=search] .search {
+  display: block;
+}
+main[data-section=search] .home, main[data-section=search] .playlist, main[data-section=search] .user {
+  display: none;
+}
+main[data-section=playlist] .playlist {
+  display: block;
+}
+main[data-section=playlist] .home, main[data-section=playlist] .search, main[data-section=playlist] .user {
+  display: none;
+}
+main[data-section=user] .search {
+  display: block;
+}
+main[data-section=user] .home, main[data-section=user] .search, main[data-section=user] .playlist {
+  display: none;
+}

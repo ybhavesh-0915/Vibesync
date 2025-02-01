@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root {
+  --primary: #000;
+  --secondary: #1f1f1f;
+  --tertiary: #303030;
+  --quatenary: #404040;
+  --penta: #505050;
+  --hexa: #606060;
+  --grey: #808080;
+  --light-grey: #b3b3b3;
+  --green: #1ed760;
+  --font: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Nunito", serif;
+}
+
+body {
+  background-color: var(--secondary);
+  color: var(--font);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-btn{
+  color: var(--green) !important;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
