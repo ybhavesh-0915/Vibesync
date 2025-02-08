@@ -9,8 +9,8 @@
 }
 .home .home-header {
   padding: 10px;
-  background-color: var(--secondary);
-  border-bottom: 1px solid var(--tertiary);
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--secondary);
   display: flex;
   gap: 16px;
   align-items: center;
@@ -41,7 +41,7 @@
   overflow: hidden;
 }
 .home .home-header .home-buttons button.active-btn {
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   padding: 5px 8px 5px 12px;
   position: relative;
 }
@@ -91,66 +91,16 @@
 }
 .home .music-section .music-wrapper .music-slider .music-card .music-title {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .home .music-section .music-wrapper .music-slider .music-card .music-artist {
   margin: auto;
   width: 90%;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--light-grey);
 }
 .home .music-section .music-wrapper .music-slider .music-card .music-title,
 .home .music-section .music-wrapper .music-slider .music-card .music-artist {
-  overflow: hidden;
-  text-wrap: nowrap;
-  text-align: center;
-  text-overflow: ellipsis;
-}
-.home .music-section .music-wrapper .music-slider .playlist-card {
-  width: 150px;
-  flex-shrink: 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-}
-.home .music-section .music-wrapper .music-slider .playlist-card::before, .home .music-section .music-wrapper .music-slider .playlist-card::after {
-  content: "";
-  height: 6px;
-  border-radius: 8px 8px 0 0;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-}
-.home .music-section .music-wrapper .music-slider .playlist-card::before {
-  width: 88%;
-  background-color: var(--penta);
-  border-bottom: 1px solid var(--secondary);
-  top: 7px;
-  z-index: -1;
-}
-.home .music-section .music-wrapper .music-slider .playlist-card::after {
-  width: 78%;
-  background-color: var(--quatenary);
-  top: 0;
-}
-.home .music-section .music-wrapper .music-slider .playlist-card .playlist-cover {
-  margin-top: 14px;
-  height: 136px;
-  width: 150px;
-  border-radius: 5px;
-}
-.home .music-section .music-wrapper .music-slider .playlist-card .playlist-title {
-  font-size: 15px;
-  font-weight: 700;
-}
-.home .music-section .music-wrapper .music-slider .playlist-card .playlist-artist {
-  margin: auto;
-  width: 90%;
-  font-size: 12px;
-  color: var(--light-grey);
-}
-.home .music-section .music-wrapper .music-slider .playlist-card .playlist-title,
-.home .music-section .music-wrapper .music-slider .playlist-card .playlist-artist {
   overflow: hidden;
   text-wrap: nowrap;
   text-align: center;

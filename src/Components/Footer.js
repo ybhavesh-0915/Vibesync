@@ -27,8 +27,7 @@ const Footer = () => {
                             <div className="player-song-title">Chammak Chalo</div>
                             <div className="player-artist-name">Bhavesh, Bhupender</div>
                         </div>
-                        {/* <button type="button" className="footer-loop-btn active-btn" title="Loop This Music"><i className="ri-repeat-2-line"></i></button> */}
-                        <input type="checkbox" className="footer-loop"/>
+                        <input type="checkbox" className="footer-loop" />
 
                     </div>
                     <Slider
@@ -61,14 +60,13 @@ const Footer = () => {
                         })}
                     />
                     <div className="footer-player-controls">
-                        {/* <button type="button" className="footer-like-btn active-btn"><i className="ri-heart-fill"></i></button> */}
-                        <input type="checkbox" className="footer-like"/>
+                        <input type="checkbox" className="footer-like" />
                         <div className="footer-music-ctrls">
                             <button type="button" className="footer-backward-btn"><i className="ri-skip-back-fill"></i></button>
                             <button type="button" className="footer-playpause-btn"><i className="ri-pause-large-fill"></i></button>
                             <button type="button" className="footer-forward-btn"><i className="ri-skip-forward-fill"></i></button>
                         </div>
-                        <button type="button" className="footer-playlist-add-btn"><i className="ri-play-list-add-line"></i></button>
+                        <button type="button" className="footer-playlist-add-btn btn"><i className="ri-play-list-add-line"></i></button>
                     </div>
                 </div>
             </footer>

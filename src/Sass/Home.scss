@@ -11,8 +11,8 @@
 
     .home-header {
         padding: 10px;
-        background-color: var(--secondary);
-        border-bottom: 1px solid var(--tertiary);
+        background-color: var(--primary);
+        border-bottom: 1px solid var(--secondary);
         display: flex;
         gap: 16px;
         align-items: center;
@@ -46,7 +46,7 @@
                 overflow: hidden;
 
                 &.active-btn {
-                    background-color: var(--tertiary);
+                    background-color: var(--secondary);
                     padding: 5px 8px 5px 12px;
                     position: relative;
 
@@ -106,78 +106,18 @@
 
                     .music-title {
                         font-size: 15px;
-                        font-weight: 700;
+                        font-weight: 500;
                     }
 
                     .music-artist {
                         margin: auto;
                         width: 90%;
-                        font-size: 12px;
+                        font-size: 10px;
                         color: var(--light-grey);
                     }
 
                     .music-title,
                     .music-artist {
-                        overflow: hidden;
-                        text-wrap: nowrap;
-                        text-align: center;
-                        text-overflow: ellipsis;
-                    }
-                }
-
-                .playlist-card {
-                    width: 150px;
-                    flex-shrink: 0;
-                    overflow: hidden;
-                    position: relative;
-                    z-index: 2;
-
-                    &::before,
-                    &::after {
-                        content: "";
-                        // margin: auto;
-                        height: 6px;
-                        border-radius: 8px 8px 0 0;
-                        left: 50%;
-                        position: absolute;
-                        transform: translateX(-50%);
-                    }
-                    
-                    &::before {
-                        width: 88%;
-                        background-color: var(--penta);
-                        border-bottom: 1px solid var(--secondary);
-                        top: 7px;
-                        z-index: -1;
-                    }
-
-                    &::after {
-                        width: 78%;
-                        background-color: var(--quatenary);
-                        top: 0;
-                    }
-
-                    .playlist-cover {
-                        margin-top: 14px;
-                        height: 136px;
-                        width: 150px;
-                        border-radius: 5px;
-                    }
-
-                    .playlist-title {
-                        font-size: 15px;
-                        font-weight: 700;
-                    }
-
-                    .playlist-artist {
-                        margin: auto;
-                        width: 90%;
-                        font-size: 12px;
-                        color: var(--light-grey);
-                    }
-
-                    .playlist-title,
-                    .playlist-artist {
                         overflow: hidden;
                         text-wrap: nowrap;
                         text-align: center;

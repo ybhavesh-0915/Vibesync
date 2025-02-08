@@ -8,8 +8,8 @@
 }
 .user .user-header {
   padding: 10px;
-  background-color: var(--secondary);
-  border-bottom: 1px solid var(--tertiary);
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--secondary);
   display: flex;
   gap: 16px;
   align-items: center;
@@ -31,7 +31,7 @@
 }
 .user .user-header .logout-btn {
   padding: 5px 15px;
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   border: 0;
   border-radius: 20px;
   font-size: 16px;
@@ -42,22 +42,20 @@
 .user .user-header .logout-btn:hover {
   background-color: var(--tomato);
 }
-.user .user-profile-section {
-  padding: 10px;
-}
-.user .user-profile-section .user-profile {
+.user .user-profile {
+  margin: 8px;
   padding: 8px;
   display: flex;
   align-items: stretch;
   gap: 8px;
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   border-radius: 5px;
 }
-.user .user-profile-section .user-profile .user-profile-img {
+.user .user-profile .user-profile-img {
   margin: auto;
   height: 80px;
   width: 80px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   border-radius: 5px;
   display: flex;
   align-items: stretch;
@@ -66,18 +64,18 @@
   position: relative;
   overflow: hidden;
 }
-.user .user-profile-section .user-profile .user-profile-img:hover .upload-btn {
+.user .user-profile .user-profile-img:hover .upload-btn {
   bottom: 0px;
 }
-.user .user-profile-section .user-profile .user-profile-img #user-img {
+.user .user-profile .user-profile-img #user-img {
   display: none;
 }
-.user .user-profile-section .user-profile .user-profile-img img {
+.user .user-profile .user-profile-img img {
   border-radius: 5px;
   width: 80px;
   aspect-ratio: 1/1;
 }
-.user .user-profile-section .user-profile .user-profile-img .upload-btn {
+.user .user-profile .user-profile-img .upload-btn {
   width: 100%;
   background-color: rgba(31, 214, 95, 0.5);
   position: absolute;
@@ -86,15 +84,15 @@
   transition: all 0.2s linear;
   cursor: pointer;
 }
-.user .user-profile-section .user-profile .user-basic-info {
+.user .user-profile .user-basic-info {
   width: 100%;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   border-radius: 5px;
   display: grid;
   align-items: stretch;
   overflow: hidden;
 }
-.user .user-profile-section .user-profile .user-basic-info .user-name {
+.user .user-profile .user-basic-info .user-name {
   padding: 8px;
   font-size: 18px;
   font-weight: bold;
@@ -103,10 +101,136 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.user .user-profile-section .user-profile .user-basic-info .user-email {
+.user .user-profile .user-basic-info .user-email {
   padding: 8px;
   font-weight: bold;
   text-wrap: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.user .user-song-lang {
+  margin: 8px;
+  padding: 8px 8px 8px 8px;
+  background-color: var(--secondary);
+  border-radius: 5px;
+}
+.user .user-song-lang .user-song-lang-header {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--tertiary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user .user-song-lang .user-song-lang-header span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.user .user-song-lang .user-song-lang-header .update-song-lang-btn {
+  padding: 5px 10px;
+  background-color: var(--tertiary);
+  border: 0;
+  border-radius: 5px;
+  color: var(--font);
+  cursor: pointer;
+}
+.user .user-song-lang .user-song-lang-header .update-song-lang-btn:active {
+  color: var(--green);
+  animation: click 0.2s linear;
+}
+.user .user-song-lang .user-selected-lang {
+  max-height: 275px;
+  padding-top: 8px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  overflow: auto;
+}
+.user .user-song-lang .user-selected-lang::-webkit-scrollbar {
+  display: none;
+}
+.user .user-song-lang .user-selected-lang span {
+  padding: 8px;
+  background-color: var(--tertiary);
+  border-radius: 5px;
+}
+.user .user-fav-artist {
+  margin: 8px;
+  padding: 8px 8px 8px 8px;
+  background-color: var(--secondary);
+  border-radius: 5px;
+}
+.user .user-fav-artist .user-fav-artist-header {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--tertiary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user .user-fav-artist .user-fav-artist-header span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.user .user-fav-artist .user-fav-artist-header .update-fav-artist-btn {
+  padding: 5px 10px;
+  background-color: var(--tertiary);
+  border: 0;
+  border-radius: 5px;
+  color: var(--font);
+  cursor: pointer;
+}
+.user .user-fav-artist .user-fav-artist-header .update-fav-artist-btn:active {
+  color: var(--green);
+  animation: click 0.2s linear;
+}
+.user .user-fav-artist .user-selected-artist {
+  margin-top: 8px;
+  border-radius: 4px;
+  display: flex;
+  gap: 8px;
+  overflow: auto;
+}
+.user .user-fav-artist .user-selected-artist::-webkit-scrollbar {
+  display: none;
+}
+.user .user-fav-artist .user-selected-artist .selected-artist {
+  width: 120px;
+  background-color: var(--tertiary);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.user .user-fav-artist .user-selected-artist .selected-artist img {
+  height: 120px;
+  aspect-ratio: 1/1;
+}
+.user .user-fav-artist .user-selected-artist .selected-artist span {
+  width: 100%;
+  padding: 5px;
+  background-color: var(--tertiary);
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  text-align: center;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.user .about-site {
+  margin: 8px;
+  padding: 8px 8px 8px 8px;
+  background-color: var(--secondary);
+  border-radius: 5px;
+}
+.user .about-site .about-site-header {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--tertiary);
+  font-size: 20px;
+  font-weight: 600;
+}
+.user .about-site .about-text {
+  margin-top: 8px;
+  text-align: justify;
 }

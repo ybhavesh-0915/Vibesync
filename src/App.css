@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
-  --primary: #000;
-  --secondary: #1f1f1f;
-  --tertiary: #303030;
-  --quatenary: #404040;
-  --penta: #505050;
-  --hexa: #606060;
+  --primary: #1f1f1f;
+  --secondary: #303030;
+  --tertiary: #404040;
+  --quatnery: #505050;
+  --penta: #606060;
   --grey: #808080;
   --light-grey: #b3b3b3;
   --green: #1ed760;
-  /* --tomato: #f4511e; */
   --tomato : #ff6347;
   --font: #fff;
 }
@@ -21,11 +19,10 @@
   user-select: none;
   box-sizing: border-box;
   font-family: "Nunito", serif;
-  /* scrollbar-width: 0; */
 }
 
 body {
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: var(--font);
 }
 
@@ -37,6 +34,13 @@ body {
 
 .active-btn{
   color: var(--green) !important;
+}
+
+.hr{
+  margin: auto;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid var(--secondary);
 }
 
 @keyframes gradient {
@@ -51,9 +55,12 @@ body {
   }
 
 }
-.hr{
-  margin: auto;
-  width: 100%;
-  display: block;
-  border-bottom: 1px solid var(--tertiary);
+
+@keyframes click{
+  0%{
+    transform: scale(0.8);
+  }
+  100%{
+    transform: scale(1);
+  }
 }

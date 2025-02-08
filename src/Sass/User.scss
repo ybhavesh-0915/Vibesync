@@ -9,8 +9,8 @@
 
     .user-header {
         padding: 10px;
-        background-color: var(--secondary);
-        border-bottom: 1px solid var(--tertiary);
+        background-color: var(--primary);
+        border-bottom: 1px solid var(--secondary);
         display: flex;
         gap: 16px;
         align-items: center;
@@ -34,7 +34,7 @@
 
         .logout-btn {
             padding: 5px 15px;
-            background-color: var(--tertiary);
+            background-color: var(--secondary);
             border: 0;
             border-radius: 20px;
             font-size: 16px;
@@ -48,82 +48,223 @@
         }
     }
 
-    .user-profile-section {
-        padding: 10px;
+    .user-profile {
+        margin: 8px;
+        padding: 8px;
+        display: flex;
+        align-items: stretch;
+        gap: 8px;
+        background-color: var(--secondary);
+        border-radius: 5px;
 
-        .user-profile {
-            padding: 8px;
+        .user-profile-img {
+            margin: auto;
+            height: 80px;
+            width: 80px;
+            background-color: var(--primary);
+            border-radius: 5px;
             display: flex;
             align-items: stretch;
-            gap: 8px;
-            background-color: var(--tertiary);
-            border-radius: 5px;
+            justify-content: stretch;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
 
-            .user-profile-img {
-                margin: auto;
-                height: 80px;
-                width: 80px;
-                background-color: var(--secondary);
-                border-radius: 5px;
-                display: flex;
-                align-items: stretch;
-                justify-content: stretch;
-                flex-shrink: 0;
-                position: relative;
-                overflow: hidden;
-                &:hover{
-                    .upload-btn{
-                        bottom: 0px;
-                    }
-                }
-
-                #user-img {
-                    display: none;
-                }
-
-                img {
-                    border-radius: 5px;
-                    width: 80px;
-                    aspect-ratio: 1/1;
-                }
-                .upload-btn{
-                    width: 100%;
-                    background-color: rgba(31, 214, 95, 0.5);
-                    position: absolute;
-                    bottom: -25px;
-                    text-align: center;
-                    transition: all 0.2s linear;
-                    cursor: pointer;
+            &:hover {
+                .upload-btn {
+                    bottom: 0px;
                 }
             }
 
-            .user-basic-info {
-                width: 100%;
-                background-color: var(--secondary);
+            #user-img {
+                display: none;
+            }
+
+            img {
                 border-radius: 5px;
-                display: grid;
-                align-items: stretch;
+                width: 80px;
+                aspect-ratio: 1/1;
+            }
+
+            .upload-btn {
+                width: 100%;
+                background-color: rgba(31, 214, 95, 0.5);
+                position: absolute;
+                bottom: -25px;
+                text-align: center;
+                transition: all 0.2s linear;
+                cursor: pointer;
+            }
+        }
+
+        .user-basic-info {
+            width: 100%;
+            background-color: var(--primary);
+            border-radius: 5px;
+            display: grid;
+            align-items: stretch;
+            overflow: hidden;
+
+            .user-name {
+                padding: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                text-wrap: nowrap;
+                text-transform: capitalize;
                 overflow: hidden;
+                text-overflow: ellipsis;
+            }
 
-                .user-name {
-                    padding: 8px;
-                    font-size: 18px;
-                    font-weight: bold;
-                    text-wrap: nowrap;
-                    text-transform: capitalize;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
+            .user-email {
+                padding: 8px;
+                font-weight: bold;
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
 
-                .user-email {
-                    padding: 8px;
-                    font-weight: bold;
-                    text-wrap: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
+    .user-song-lang {
+        margin: 8px;
+        padding: 8px 8px 8px 8px;
+        background-color: var(--secondary);
+        border-radius: 5px;
+
+        .user-song-lang-header {
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--tertiary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .update-song-lang-btn {
+                padding: 5px 10px;
+                background-color: var(--tertiary);
+                border: 0;
+                border-radius: 5px;
+                color: var(--font);
+                cursor: pointer;
+
+                &:active {
+                    color: var(--green);
+                    animation: click 0.2s linear;
                 }
             }
         }
 
+        .user-selected-lang {
+            max-height: 275px;
+            padding-top: 8px;
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            span {
+                padding: 8px;
+                background-color: var(--tertiary);
+                border-radius: 5px;
+            }
+        }
     }
+
+    .user-fav-artist {
+        margin: 8px;
+        padding: 8px 8px 8px 8px;
+        background-color: var(--secondary);
+        border-radius: 5px;
+
+        .user-fav-artist-header {
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--tertiary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .update-fav-artist-btn {
+                padding: 5px 10px;
+                background-color: var(--tertiary);
+                border: 0;
+                border-radius: 5px;
+                color: var(--font);
+                cursor: pointer;
+
+                &:active {
+                    color: var(--green);
+                    animation: click 0.2s linear;
+                }
+            }
+        }
+
+        .user-selected-artist{
+            margin-top: 8px;
+            border-radius: 4px;
+            display: flex;
+            gap: 8px;
+            overflow: auto;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            .selected-artist{
+                width: 120px;
+                background-color: var(--tertiary);
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                position: relative;
+                flex-shrink: 0;
+                img{
+                    height: 120px;
+                    aspect-ratio: 1/1;
+                }
+                span{
+                    width: 100%;
+                    padding: 5px;
+                    background-color: var(--tertiary);
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 12px;
+                    text-align: center;
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+            
+        }
+    }
+
+    .about-site{
+        margin: 8px;
+        padding: 8px 8px 8px 8px;
+        background-color: var(--secondary);
+        border-radius: 5px;
+        .about-site-header{
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--tertiary);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .about-text{
+            margin-top: 8px;
+            text-align: justify;
+        }
+    }
+
 }
