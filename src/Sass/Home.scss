@@ -135,19 +135,20 @@
                     &::before,
                     &::after {
                         content: "";
-                        margin: auto;
+                        // margin: auto;
                         height: 6px;
-                        border-radius: 4px 4px 0 0;
+                        border-radius: 8px 8px 0 0;
                         left: 50%;
                         position: absolute;
                         transform: translateX(-50%);
                     }
-
+                    
                     &::before {
                         width: 88%;
                         background-color: var(--penta);
+                        border-bottom: 1px solid var(--secondary);
                         top: 7px;
-
+                        z-index: -1;
                     }
 
                     &::after {

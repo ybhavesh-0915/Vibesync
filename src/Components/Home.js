@@ -2,7 +2,6 @@ import React from 'react'
 import "../CSS/Home.css"
 import logo from "../Images/logo.png"
 import img5 from "../Images/img5.jpeg"
-import img6 from "../Images/img7.jpg"
 const Home = () => {
     return (
         <>
@@ -26,16 +25,16 @@ const Home = () => {
                                 <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
-                            <div className="playlist-card">
-                                <img className="playlist-cover" src={img6} alt="Already Know" loading="lazy" />
-                                <div className="playlist-title" title="Music Title">Already Know</div>
-                                <div className="playlist-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
-                            <div className="playlist-card">
-                                <img className="playlist-cover" src={img6} alt="Already Know" loading="lazy" />
-                                <div className="playlist-title" title="playlist Title">Already Know</div>
-                                <div className="playlist-artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
                             <div className="music-card">
@@ -53,7 +52,7 @@ const Home = () => {
                     </div>
 
                     <div className="music-wrapper">
-                        <h1 className="slider-heading">New Releases</h1>
+                        <h1 className="slider-heading">Recommended for you</h1>
                         <div className="music-slider">
                             <div className="music-card">
                                 <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
@@ -61,16 +60,16 @@ const Home = () => {
                                 <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
-                            <div className="playlist-card">
-                                <img className="playlist-cover" src={img6} alt="Already Know" loading="lazy" />
-                                <div className="playlist-title" title="Music Title">Already Know</div>
-                                <div className="playlist-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
-                            <div className="playlist-card">
-                                <img className="playlist-cover" src={img6} alt="Already Know" loading="lazy" />
-                                <div className="playlist-title" title="Playlistodcast Title">Already Know</div>
-                                <div className="playlist-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
                             <div className="music-card">
@@ -88,7 +87,7 @@ const Home = () => {
                     </div>
 
                     <div className="music-wrapper">
-                        <h1 className="slider-heading">Recommended Music</h1>
+                        <h1 className="slider-heading">For You</h1>
                         <div className="music-slider">
                             <div className="music-card">
                                 <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
@@ -96,16 +95,16 @@ const Home = () => {
                                 <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
-                            <div className="playlist-card">
-                                <img className="playlist-cover" src={img6} alt="Already Know" loading="lazy" />
-                                <div className="playlist-title" title="Music Title">Already Know</div>
-                                <div className="playlist-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
-                            <div className="playlist-card">
-                                <img className="playlist-cover" src={img6} alt="Already Know" loading="lazy" />
-                                <div className="playlist-title" title="playlist Title">Already Know</div>
-                                <div className="playlist-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
                             <div className="music-card">
@@ -123,7 +122,7 @@ const Home = () => {
                     </div>
 
                     <div className="music-wrapper">
-                        <h1 className="slider-heading">Recently Played</h1>
+                        <h1 className="slider-heading">Based on recent</h1>
                         <div className="music-slider">
                             <div className="music-card">
                                 <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
@@ -131,16 +130,51 @@ const Home = () => {
                                 <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
-                            <div className="playlist-card">
-                                <img className="playlist-cover" src={img6} alt="Already Know" loading="lazy" />
-                                <div className="playlist-title" title="Music Title">Already Know</div>
-                                <div className="playlist-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
-                            <div className="playlist-card">
-                                <img className="playlist-cover" src={img6} alt="Already Know" loading="lazy" />
-                                <div className="playlist-title" title="Music Title">Already Know</div>
-                                <div className="playlist-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            </div>
+
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            </div>
+
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="music-wrapper">
+                        <h1 className="slider-heading">More of what you like</h1>
+                        <div className="music-slider">
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            </div>
+
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
+                            </div>
+
+                            <div className="music-card">
+                                <img className="music-cover" src={img5} alt="Already Know" loading="lazy" />
+                                <div className="music-title" title="Title of song">Already Know</div>
+                                <div className="music-artist" title="Artist">Folivi, Bhavesh, Bhupender, Bhavika</div>
                             </div>
 
                             <div className="music-card">
@@ -196,7 +230,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
                 </section>
                 <div className="space"></div>
             </section>

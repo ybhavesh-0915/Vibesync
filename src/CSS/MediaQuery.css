@@ -19,6 +19,12 @@
   #root main .home .home-header {
     border-bottom: 0;
   }
+  #root main .user {
+    width: calc(100dvw - 270px);
+  }
+  #root main .user .user-header {
+    border-bottom: 0;
+  }
   #root footer {
     width: 270px !important;
     height: 100vh;
@@ -77,38 +83,56 @@
     height: 45px;
     border-radius: 5px;
     aspect-ratio: 1/1;
+    flex-shrink: 0;
   }
   #root footer .footer-music-player .footer-music-info div {
     width: 100%;
+    overflow: hidden;
   }
   #root footer .footer-music-player .footer-music-info div .player-song-title {
     font-size: 18px;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
   }
   #root footer .footer-music-player .footer-music-info div .player-artist-name {
     font-size: 10px;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
     color: var(--light-grey);
   }
-  #root footer .footer-music-player .footer-music-info .footer-loop-btn {
-    background-color: transparent;
-    border-radius: 3px;
-    border: 0;
-    font-size: 20px;
-    cursor: pointer;
-    color: var(--font);
-  }
-  #root footer .footer-music-player .footer-music-info .footer-loop-btn.active-btn {
+  #root footer .footer-music-player .footer-music-info .footer-loop {
+    accent-color: var(--green);
+    appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
     position: relative;
+    color: var(--text);
+    cursor: pointer;
+  }
+  #root footer .footer-music-player .footer-music-info .footer-loop:checked {
     color: var(--green);
   }
-  #root footer .footer-music-player .footer-music-info .footer-loop-btn.active-btn::after {
-    content: "";
+  #root footer .footer-music-player .footer-music-info .footer-loop::after {
+    content: "\f074";
     position: absolute;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: var(--green);
-    top: 48%;
     left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: "remixicon";
+  }
+  #root footer .footer-music-player .footer-music-info .footer-loop:checked::before {
+    content: "";
+    height: 5px;
+    width: 5px;
+    background-color: var(--green);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
   }
   #root footer .footer-music-player .footer-player-controls {
@@ -117,19 +141,47 @@
     align-items: center;
     justify-content: space-between;
   }
-  #root footer .footer-music-player .footer-player-controls .footer-like-btn,
   #root footer .footer-music-player .footer-player-controls .footer-playlist-add-btn {
     background-color: transparent;
     border: 0;
     color: var(--font);
     font-size: 20px;
-    cursor: pointer;
     transition: all 0.1s;
+    cursor: pointer;
   }
-  #root footer .footer-music-player .footer-player-controls .footer-like-btn:active,
   #root footer .footer-music-player .footer-player-controls .footer-playlist-add-btn:active {
     color: var(--green);
     transform: scale(1.3);
+  }
+  #root footer .footer-music-player .footer-player-controls .footer-like {
+    accent-color: var(--green);
+    appearance: none;
+    height: 27.2px;
+    width: 20.84px;
+    border-radius: 5px;
+    position: relative;
+    color: var(--text);
+    transition: all 0.1s;
+    cursor: pointer;
+  }
+  #root footer .footer-music-player .footer-player-controls .footer-like:active {
+    color: var(--green);
+    transform: scale(1.3);
+  }
+  #root footer .footer-music-player .footer-player-controls .footer-like:checked {
+    color: var(--green);
+  }
+  #root footer .footer-music-player .footer-player-controls .footer-like::after {
+    content: "\ee0f";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: "remixicon";
+  }
+  #root footer .footer-music-player .footer-player-controls .footer-like:checked::after {
+    content: "\ee0e";
   }
   #root footer .footer-music-player .footer-player-controls .footer-music-ctrls button {
     background-color: transparent;
@@ -164,7 +216,7 @@
     overflow: hidden;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #00bfff);
     background-size: 180% 180%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
   }
   .footer-music-player .footer-music-info {
     display: flex;
@@ -175,16 +227,24 @@
     height: 45px;
     border-radius: 5px;
     aspect-ratio: 1/1;
+    flex-shrink: 0;
   }
   .footer-music-player .footer-music-info div {
     width: 100%;
+    overflow: hidden;
   }
   .footer-music-player .footer-music-info div .player-song-title {
     font-size: 18px;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
   }
   .footer-music-player .footer-music-info div .player-artist-name {
     font-size: 10px;
-    color: var(--light-grey);
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    color: var(--font);
   }
   .footer-music-player .footer-music-info .footer-loop-btn {
     background-color: transparent;
@@ -193,6 +253,7 @@
     font-size: 20px;
     cursor: pointer;
     color: var(--font);
+    flex-shrink: 0;
   }
   .footer-music-player .footer-music-info .footer-loop-btn.active-btn {
     position: relative;
